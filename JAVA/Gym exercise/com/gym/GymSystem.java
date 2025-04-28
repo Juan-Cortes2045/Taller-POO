@@ -23,16 +23,16 @@ public class GymSystem{
         System.out.println("Weight: " + user.getWeigh() + " kg");
         System.out.println("Stature: " + user.getStature() + " m");
         System.out.println("Plan selected: " +user.getPlan().getName());
-        user.getPlan().showServices();
+        System.out.println("Services: " + user.getPlan().getServices());
         System.out.println("Price: $" + user.getPlan().getPrice());
         System.out.println();
 
     }
 
     public static void main(String[]args){
-       Plan basicPlan= new Plan("Basic", 50000, new String[]{"General access"});
-       Plan mediumPlan= new Plan("Medium", 100000, new String[]{"General access", "Directed classes"});
-       Plan premiumPlan= new Plan("Premium", 150000, new String[]{"General access", "Directed classes", "Personal trainer", "Humed zone"});
+       Plan basicPlan= new Plan("Basic", 50000, "General access");
+       Plan mediumPlan= new Plan("Medium", 100000, "General access, Directed classes");
+       Plan premiumPlan= new Plan("Premium", 150000, "General access, Directed classes, Personal trainer, Humed zone");
 
        GymSystem gymsystem= new GymSystem();
 

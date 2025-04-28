@@ -3,9 +3,9 @@
 class Plan {
     private string $name;
     private int $price;
-    private array $services;
+    private string $services;
 
-    public function __construct(string $name, int $price, array $services) {
+    public function __construct(string $name, int $price, string $services) {
         $this->name = $name;
         $this->price = $price;
         $this->services = $services;
@@ -19,14 +19,10 @@ class Plan {
         return $this->price;
     }
 
-    public function getServices(): array {
+    public function getServices(): String {
         return $this->services;
     }
 
-    public function showServices(): void {
-        echo "SERVICES INCLUDED:"."<br>";
-        foreach ($this->getServices() as $service) {
-            echo "- $service"."<br>";
-        }
-    }
+  
+    
 }

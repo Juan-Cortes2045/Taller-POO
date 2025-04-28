@@ -3,10 +3,10 @@ package com.gym;
 public class Plan{
     private String name;
     private double price;
-    private String[] services;
+    private String services;
 
 
-    public Plan (String name, double price, String[] services) {
+    public Plan (String name, double price, String services) {
         this.name = name;
         this.price = price;
         this.services = services;
@@ -20,15 +20,8 @@ public class Plan{
         return this.price;
     }
 
-    public String[] getServices() {
+    public String getServices() {
         return this.services;
     }
-
-    public void showServices(){
-        System.out.println("Services included in the plan: ");
-        for (String service : this.getServices()) {
-            System.out.println("- " + service);
-        }
-    }
-
 }
+

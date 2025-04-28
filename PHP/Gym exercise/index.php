@@ -1,9 +1,9 @@
 <?php
 
 include_once 'Gym/GymSystem.php';
-$basicPlan = new Plan("Basic", 50000, ["General access"]);
-$mediumPlan = new Plan("Medium", 100000, ["General access", "Directed classes"]);
-$premiumPlan = new Plan("Premium", 150000, ["General access", "Directed classes", "Personal trainer", "Humed zone"]);
+$basicPlan = new Plan("Basic", 50000, "General access");
+$mediumPlan = new Plan("Medium", 100000, "General access, Directed classes");
+$premiumPlan = new Plan("Premium", 150000, "General access, Directed classes, Personal trainer, Humed zone");
 
 $gymSystem = new GymSystem();
 

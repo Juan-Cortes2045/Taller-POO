@@ -21,7 +21,7 @@ class GymSystem {
         echo "Weight: " . $user->getWeigh() . " kg"."<br>";
         echo "Stature: " . $user->getStature() . "m"."<br>";
         echo "Plan selected: " . $user->getPlan()->getName() . "<br>";
-        $user->getPlan()->showServices();
+        echo "Services: ".$user->getPlan()->getServices()."<br>";
         echo "Price: $" . $user->getPlan()->getPrice() . "<br>";
         echo "----------------------------------------"."<br>";
     }
