@@ -73,6 +73,10 @@ public class Employee extends Person {
     public String getNLevelRisk(){
         return this.nlevelRisk;
     }
+
+    public Discounts getNDiscounts(){
+        return this.nDiscounts;
+    }
     @Override
     public double getNetSalary(){
         return (this.getSalary() + this.getSubsidy() + this.nDiscounts.getExtras()) - this.nDiscounts.getTotalDiscounts();
@@ -85,23 +89,6 @@ public class Employee extends Person {
    
     
     
-    public void showData(){
-        
-
-        System.out.println("Los datos del empleado son: " + this.getDescription());
-        System.out.println("El salario es: " + this.getSalary());
-        System.out.println("El subsidio es de: " + this.getSubsidy());
-        System.out.println("La cantidad de dias trabajados son: " + this.getDaysWorked());
-        System.out.println("La cantidad de horas normales trabajadas es: " + this.getNormalHours());
-        System.out.println("La cantidad de horas extras diurnas trabajadas es: " + this.getDaytimeOvertime());
-        System.out.println("La cantidad de horas extras nocturnas trabajadas es: " + this.getNightimeOvertime());
-        System.out.println("La cantidad de horas extras de festivos es: " + this.getHolidaysOvertime());
-        System.out.println("El salario neto es: " + this.getNetSalary());
-        System.out.println("Nivel de riesgo: "+this.getNLevelRisk());
-        this.nDiscounts.show(); 
-    }
-    public static void main(String[]args){
-        Employee nEmployee= new Employee("Juan", "Cortes", 17, 122342374, 3000000, "alto");
-        nEmployee.showData();
-    }
+   
+    
 }
